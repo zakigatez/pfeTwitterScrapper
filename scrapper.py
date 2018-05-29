@@ -102,7 +102,7 @@ for page in tweepy.Cursor(api.search, q=query,include_entities=True).pages():
 
             all.append(replies)
 
-            if all.count() > 100000:
+            if all.count() > 5000:
                 json.dump(all, file_tosave)
                 file_count +=1
                 tweet_count = 0
